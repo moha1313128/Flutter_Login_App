@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "349027193906",
+    "firebase_url": "https://login-dea2e.firebaseio.com",
+    "project_id": "login-dea2e",
+    "storage_bucket": "login-dea2e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349027193906:android:0b76ea2b2e7e350f5cd82b",
+        "android_client_info": {
+          "package_name": "com.example.login_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "349027193906-e12hlrkr4pljt58pbkbpjb48gfmefru8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBsCaE-AppRSR0qG0h0fHkAnWAcDZY1Dw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "349027193906-e12hlrkr4pljt58pbkbpjb48gfmefru8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
