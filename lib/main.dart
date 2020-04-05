@@ -1,19 +1,55 @@
 import 'package:flutter/material.dart';
-import 'sidebar/sidebar_layout.dart';
+import 'package:app/auth/login_page.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: 'Flutter Login',
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        primaryColor: Colors.white,
+        primarySwatch: Colors.blue,
       ),
-      home: new SideBarLayout()
+      home: LoginPage(),
     );
   }
 }
+
+// import 'package:app/loginpage.dart';
+// import 'package:app/homepage.dart';
+// import 'package:app/signuppage.dart';
+// import 'package:flutter/material.dart';
+
+// void main() => runApp(MyApp());
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return new MaterialApp(home: LoginPage(), routes: <String, WidgetBuilder>{
+//       '/landingpage': (BuildContext context) => new MyApp(),
+//       '/signuppage': (BuildContext context) => new SignupPage(),
+//       '/homepage': (BuildContext context) => new FirstScreen(),
+//     });
+//   }
+// }
+
+// import 'package:flutter/material.dart';
+// import 'loginpage.dart';
+
+// void main() => runApp(MyApp());
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       title: 'Flutter Login',
+//       theme: ThemeData(
+//         primarySwatch: Colors.blue,
+//       ),
+//       home: LoginPage(),
+//     );
+//   }
+// }
