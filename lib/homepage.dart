@@ -28,6 +28,8 @@ class FirstScreen extends StatelessWidget {
                 radius: 60,
                 backgroundColor: Colors.transparent,
               ),
+              // FadeInImage.assetNetwork(
+              // placeholder: 'images/default.jpg', image: imageUrl),
               SizedBox(height: 40),
               Text(
                 'NAME',

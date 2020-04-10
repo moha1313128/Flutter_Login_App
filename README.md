@@ -80,6 +80,10 @@ class LoginPage extends StatelessWidget {
 }
 
 ```
+## Authenticated client [Work]
+```
+keytool -exportcert -keystore C:\Users\MOHAMMEDETTAIBI\.android\debug.keystore -list -v
+```
 
 
 ## Get SHA1 from debug.keystore file
