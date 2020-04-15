@@ -1,59 +1,38 @@
-// import 'package:app/uploadImage.dart';
-// import 'package:flutter/material.dart';
-// import 'package:app/auth/login_page.dart';
-
-// void main() => runApp(MyApp());
-
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       title: 'Flutter Login',
-//       theme: ThemeData(
-//         primarySwatch: Colors.blue,
-//       ),
-//       home: ProfilePage(),
-//     );
-//   }
-// }
-
-import 'package:app/loginpage.dart';
-import 'package:app/homepage.dart';
-import 'package:app/signuppage.dart';
+import 'package:app/notifier/auth_notifier.dart';
+import 'package:app/notifier/food_notifier.dart';
+import 'package:app/screens/feed.dart';
+import 'package:app/screens/food_form.dart';
+import 'package:app/screens/login.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          builder: (context) => AuthNotifier(),
+        ),
+        ChangeNotifierProvider(
+          builder: (context) => FoodNotifier(),
+        ),
+      ],
+      child: MyApp(),
+    ));
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: LoginPage(),
-        routes: <String, WidgetBuilder>{
-          '/landingpage': (BuildContext context) => new MyApp(),
-          '/signuppage': (BuildContext context) => new SignupPage(),
-          '/homepage': (BuildContext context) => new FirstScreen(),
-        });
+        theme: ThemeData(
+          primarySwatch: Colors.deepPurple,
+          accentColor: Colors.blue,
+        ),
+        // home: FoodForm(),
+        home: Consumer<AuthNotifier>(
+          builder: (context, notifier, child) {
+            return notifier.user != null ? Feed() : Login();
+          },
+        ));
   }
 }
-
-// import 'package:flutter/material.dart';
-// import 'loginpage.dart';
-
-// void main() => runApp(MyApp());
-
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       title: 'Flutter Login',
-//       theme: ThemeData(
-//         primarySwatch: Colors.blue,
-//       ),
-//       home: LoginPage(),
-//     );
-//   }
-// }

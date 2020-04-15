@@ -1,6 +1,5 @@
-# app
-
-A new Flutter project.
+# CRUD App
+https://github.com/JulianCurrie/CwC_Flutter
 
 ## Getting Started
 
@@ -16,6 +15,7 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ## Tutorial
+```
 https://medium.com/flutterpub/flutter-how-to-do-user-login-with-firebase-a6af760b14d5
 ```
 code
